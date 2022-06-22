@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="node_modules/guppy-js/guppy-default-osk.min.css">
+    <link rel="stylesheet" href="mpfo-math-editor.css">
+    <script type="text/javascript" src="node_modules/guppy-js/guppy.min.js"></script>
+    <script type="text/javascript" src="node_modules/guppy-js/guppy_osk.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/vkiryukhin/vkBeautify@master/vkbeautify.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/IFTE-EDA/mpfo-math-editor/main/guppy-xml-to-mpfo-math.js"></script>
+    <script type="text/javascript" src="mpfo-math-editor.js"></script>
+</head>
+
+<body>
+    <h1>MPFo Math Editor</h1>
+
+    <p>Mission profiles (MP) describe all functional and environmental loads a set of components or complex systems have to sustain during production, storage, shipping, assembly and operation.
+    Additionally, they can also be used to communicate the load capabilities of components and technologies.</p>
+
+    <p>In the publicly funded project <a href="https://www.dke.de/de/arbeitsfelder/core-safety/elda-mp">ELDA-MP</a> (German), we strive to standardize an electronic data format for these mission profiles.</p>
+
+    <p>One aspect of this Mission Profile Format (MPFo) is to describe physical quantities and mathematical expressions using XML.</p>
+
+    <p>This editor helps to create these MPFo math expressions.</p>
+
+    <h2>Features</h2>
+    <ul>
+        <li>Support of custom symbols, e.g. type <code>Umax</code> and get the single symbol <i>U</i><sub>max</sub> instead of the product <i>Umax</i> in the formula editor
+        <li>Support of SI prefixes and units</li>
+        <li>Support of piecewise-defined expressions</li>
+        <li>Automatic detection of physical quantities</li>
+    </ul>
+
+    <h2>Editor</h2>
+    <div id="guppy1"></div>
+
+    <h2>Result</h2>
+    <!--
+    <div class="label">LaTeX: </div><textarea type="text" id="output_latex" class="output"></textarea>
+    <div class="label">ASCIIMath: </div><textarea type="text" id="output_asciimath" class="output"></textarea>
+    <div class="label">Text: </div><textarea type="text" id="output_text" class="output"></textarea>
+    <div class="label">JSON: </div><textarea type="text" id="output_ast" class="output"></textarea>
+    <div class="label">XML: </div><textarea type="text" id="output_xml" class="output"></textarea>
+    -->
+    <div class="label">MPFo math: </div><textarea type="text" id="output_mpfo_math" class="output" rows="30" cols="100"></textarea>
+
+    <p style="text-align:right;">This MPFo Math Editor is based on <a href="https://guppy.js.org">Guppy</a> which is licensed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
+
+    <h2>Custom Symbols</h2>
+    <p>You can define custom mathematical/physical symbols for later use in the formula.</p>
+
+    <p><strong>Example:</strong>
+    By defining a custom symbol <code>U_max</code>, you can type <code>Umax</code> in the formula editor and get the single symbol <i>U</i><sub>max</sub> instead of the product <i>Umax</i>. In this case, the resulting MPFo math code is <code>&lt;Identifier name="Umax"&#47;&gt;</code>.<p>
+
+    <h3>Definition</h3>
+
+    <div class="container">
+        <input type="text" id="input_symbol" placeholder="Symbol, e.g. 'U_max'"></input>
+        <div class="button" onclick="add_symbol()">Add Custom Symbol</div>
+    </div>
+
+    <p>You may use an underscore to separate the main symbol from a subscript.</p>
+
+    <h3>Usage</h3>
+
+    <p>To use a custom symbol, just enter its (case-sensitive) name in the editor.</p>
+
+    <p>If a symbol has a subscript, enter its name <em>without</em> underscore in the editor.</p>
+
+    <h2>Installation</h2>
+    <p>See <a href="https://github.com/IFTE-EDA/mpfo-math-editor#installation">README.md</a>.</p>
+
+    <h2>Usage</h2>
+    <p>See <a href="https://github.com/IFTE-EDA/mpfo-math-editor#usage">README.md</a>.</p>
+</body>
+
+</html>

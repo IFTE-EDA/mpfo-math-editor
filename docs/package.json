@@ -1,0 +1,34 @@
+{
+  "name": "mpfo-math-editordemo",
+  "version": "1.0.0",
+  "description": "Demo of our WYSIWYG editor for math expressions in MPFo documents",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IFTE-EDA/mpfo-math-editor"
+  },
+  "keywords": [
+    "mpfo",
+    "math",
+    "xml",
+    "equation",
+    "formula",
+    "editor"
+  ],
+  "author": {
+    "name": "Andreas Krinke",
+    "url": "https://www.ifte.de"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/IFTE-EDA/mpfo-math-editor",
+  "bugs": "https://github.com/IFTE-EDA/mpfo-math-editor/issues",
+  "scripts": {
+    "start": "http-server -c-1 -p 8081"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.0"
+  },
+  "dependencies": {
+    "guppy-js": "^2.0.0-beta.3",
+    "mpfo-math-editor": "file:.."
+  }
+}
