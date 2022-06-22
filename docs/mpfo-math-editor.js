@@ -51,7 +51,7 @@ window.onload = function(){
     Guppy.init({
         "osk":new GuppyOSK({"attach": "focus"}),
         "path":"node_modules/guppy-js",
-        "symbols":["node_modules/guppy-js/sym/symbols.json","node_modules/mpfo-math-editor/mpfo-math-symbols.json"],
+        "symbols":["node_modules/guppy-js/sym/symbols.json","https://raw.githack.com/IFTE-EDA/mpfo-math-editor/main/mpfo-math-symbols.json"],
         "events": {
             "ready": update_output,
             "change": update_output,
